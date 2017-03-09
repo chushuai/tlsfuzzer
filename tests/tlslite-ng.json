@@ -126,6 +126,17 @@
           "arguments" : ["-k", "tests/clientX509Key.pem",
                          "-c", "tests/clientX509Cert.pem"]
           },
+         {"name" : "test-rsa-pss-sigs-on-certificate-verify.py",
+          "arguments" : ["-k", "tests/clientX509Key.pem",
+                         "-c", "tests/clientX509Cert.pem",
+                         "-e", "rsa_pss_sha512 in CertificateVerify"],
+          "comment" : "the client certificates are too small to sign with sha-512"},
+         {"name" : "test-rsa-pss-sigs-on-certificate-verify.py",
+          "arguments" : ["-k", "tests/clientX509Key.pem",
+                         "-c", "tests/clientX509Cert.pem",
+                         "rsa_pss_sha512 in CertificateVerify"],
+          "comment" : "the client certificates are too small to sign with sha-512",
+          "exp_pass" : false},
          {"name" : "test-rsa-sigs-on-certificate-verify.py",
           "arguments" : ["-k", "tests/clientX509Key.pem",
                          "-c", "tests/clientX509Cert.pem"]
