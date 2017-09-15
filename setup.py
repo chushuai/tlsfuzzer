@@ -5,6 +5,7 @@
 
 from distutils.core import setup
 
+io
 setup(name="tlsfuzzer",
       version="0.0.1",
       author="Hubert Kario",
